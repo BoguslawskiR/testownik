@@ -2,11 +2,14 @@
   "name": "testownikpwr",
   "version": "1.0.0",
   "description": "Testownik NG2+",
+  "angular-cli": {},
   "scripts": {
-    "build": "webpack --progress",
-    "watch": "npm run build -- --watch",
-    "server": "webpack-dev-server --inline --progress --port 3000 --content-base src",
-    "start": "npm run server"
+    "start": "node server.js",
+    "lint": "tslint \"src/**/*.ts\"",
+    "test": "ng test",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor",
+    "postinstall": "ng build --aot -prod"
   },
   "contributors": [
     "Radoslaw Boguslawski <bogusjr26@gmail.com>"
@@ -25,6 +28,9 @@
     "@angular/router": "~3.2.1",
     "@angular/upgrade": "~2.2.1",
     "angular2-in-memory-web-api": "0.0.21",
+    "angular-cli": "1.0.0-beta.15",
+    "core-js": "^2.4.1",
+    "express": "^4.14.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "ie-shim": "0.1.0",
@@ -53,5 +59,9 @@
     "type": "git",
     "url": "git+https://github.com/BoguslawskiR/testownik"
   },
-  "homepage": "https://github.com/BoguslawskiR/testownik#readme"
+  "homepage": "https://github.com/BoguslawskiR/testownik#readme",
+  "engines": {
+    "node": "6.5.0",
+    "npm": "3.10.6"
+  }
 }
