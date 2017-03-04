@@ -1,0 +1,10 @@
+<ul class="demo-list-icon mdl-list">
+  <li *ngFor="let q of test?.questions" class="mdl-list__item flex border">
+    <span class="mdl-list__item-primary-content">
+    <h4 *ngIf="!q.img_question">{{q.question}}</h4><img *ngIf="q.img_question" src="https://testownikpwr.herokuapp.com{{q.img_question}}">
+    </span>
+    <div *ngFor="let a of q.answers" [class.correct]="a.is_correct" class="mdl-list__item">
+        <span *ngIf="!a.img_answer" class="mdl-list__item-primary-content">{{a.answer}}</span><img *ngIf="a.img_answer" src="https://testownikpwr.herokuapp.com{{a.img_answer}}">
+    </div>
+  </li>
+</ul>

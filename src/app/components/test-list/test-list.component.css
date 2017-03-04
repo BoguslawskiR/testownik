@@ -1,0 +1,13 @@
+.hover:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.button {
+    margin-left: 10px;
+}

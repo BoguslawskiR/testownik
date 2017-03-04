@@ -1,0 +1,32 @@
+.mdl-card {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 50px;
+}
+
+.mdl-card__actions {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.button {
+    margin-left: 10px;
+}
+
+.mdl-list__item:hover {
+    background: rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.mdl-card__supporting-text {
+    width: 100%;
+    padding-left: 0;
+}
+
+.mdl-card__title {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.correct {
+    background: rgb(163, 206, 113);
+}

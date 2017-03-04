@@ -1,0 +1,15 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.border {
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+}
+
+.correct {
+    background: rgb(163, 206, 113);
+    width: 100%;
+}

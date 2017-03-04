@@ -1,0 +1,16 @@
+<ul class="demo-list-two mdl-list">
+  <li *ngFor="let t of testList?.results" class="mdl-list__item mdl-list__item--two-line hover">
+    <span class="mdl-list__item-primary-content">
+      <span>{{t.title}}</span>
+    <span class="mdl-list__item-sub-title">Zawiera {{t.questions_count}} pytań</span>
+    </span>
+    <span class="mdl-list__item-secondary-content flex">
+      <button class="mdl-button mdl-js-button mdl-button--primary button" (click)="navigate(t.id, 'learn')">
+        Nauka
+      </button>
+      <button class="mdl-button mdl-js-button mdl-button--accent button" (click)="navigate(t.id, 'test')">
+         Test
+      </button>
+    </span>
+  </li>
+</ul>
