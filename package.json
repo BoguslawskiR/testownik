@@ -1,5 +1,5 @@
 {
-  "name": "Testownik PWr",
+  "name": "testownikpwr",
   "version": "1.0.0",
   "description": "Testownik NG2+",
   "scripts": {
@@ -51,7 +51,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BoguslawskiR/testownik.git"
+    "url": "git+https://github.com/BoguslawskiR/testownik"
   },
   "homepage": "https://github.com/BoguslawskiR/testownik#readme"
 }
