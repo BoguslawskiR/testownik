@@ -1,6 +1,6 @@
-## angular2-seed
+## Testownik
 
-A simple starter project demonstrating the basic concepts of Angular 2.
+Projekt testownika ogólnouczelnianego PWr. Pozwala na rozwiązywanie gotowych testów, przeglądanie prawidłowych odpowiedzi, wgrywanie własnych testów, modyfikacje ich.
 
 
 ### Usage
