@@ -4,9 +4,9 @@
   </div>
   <div class="mdl-card__supporting-text">
     <ul class="demo-list-item mdl-list">
-        <li [class.correct]="checkVal && a.is_correct" *ngFor="let a of question?.answers" class="mdl-list__item">
+        <li [class.correct]="checkVal && a.is_correct" *ngFor="let a of question?.answers; let i = index" class="mdl-list__item" (click)="changeVal(i)">
             <span class="mdl-list__item-primary-content">
-                <span *ngIf="!a.img_answer">{{a.answer}}</span><img *ngIf="a.img_answer" src="https://testownikpwr.herokuapp.com{{a.img_answer}}"><input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked>
+                <span *ngIf="!a.img_answer">{{a.answer}}</span><img *ngIf="a.img_answer" src="https://testownikpwr.herokuapp.com{{a.img_answer}}">
             </span>
         </li>
     </ul>
