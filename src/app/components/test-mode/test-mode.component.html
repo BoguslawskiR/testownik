@@ -4,20 +4,25 @@
   </div>
   <div class="mdl-card__supporting-text">
     <ul class="demo-list-item mdl-list">
-        <li [class.correct]="checkVal && a.is_correct" *ngFor="let a of question?.answers; let i = index" class="mdl-list__item" (click)="changeVal(i)">
+        <li [class.correct]="checkVal && a.is_correct" [class.checked]="a.checked" *ngFor="let a of question?.answers; let i = index" class="mdl-list__item" (click)="changeVal(i)">
             <span class="mdl-list__item-primary-content">
                 <span *ngIf="!a.img_answer">{{a.answer}}</span><img *ngIf="a.img_answer" src="https://testownikpwr.herokuapp.com{{a.img_answer}}">
             </span>
         </li>
     </ul>
   </div>
-  <div class="mdl-card__actions mdl-card--border">
-      
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored button" (click)="getQuestion()">
+
+</div>
+
+<div class="demo-card-wide mdl-card mdl-shadow--2dp footer">
+
+
+   <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored button" (click)="getQuestion()">
         Dalej
       </button>
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent button" (click)="check()">
         Sprawdź
       </button>
-  </div>
+<div class="progress"><span>Pytania opanowane</span><div id="p1"  class="mdl-progress mdl-js-progress"></div></div>
+<div class="progress"><span>Stosunek poprawnych odpowiedzi</span><div id="p2" #p1 class="mdl-progress mdl-js-progress"></div></div>
 </div>

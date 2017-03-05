@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TestsService } from '../../services/tests.service';
 import { Router, ActivatedRoute } from '@angular/router'
 import 'rxjs';
@@ -13,7 +13,11 @@ export class TestComponent implements OnInit {
     private test
     private question;
     private checkVal;
-    private result = []
+    private result = [];
+    private questionIterator = 0;
+    private correctIterator = 0;
+
+    @ViewChild('p1') ProgBar;  
 
     constructor(
       private _ts: TestsService,
@@ -30,6 +34,8 @@ export class TestComponent implements OnInit {
         })
     }
 
+
+
      getQuestion(){
 
         let rand = Math.floor((Math.random() * this.test.questions.length));
@@ -41,14 +47,24 @@ export class TestComponent implements OnInit {
     }
 
     check(){
+        this.questionIterator++;
         this.checkVal=true;
         console.log(this.question.answers)
         this.question.answers.forEach(x=>{
             if(x.checked == true && x.is_correct == false) this.result.push('e');
             if(x.checked != true && x.is_correct == true) this.result.push('e');
+            x.checked = false;
         })
-        console.log(this.result)
+        if(this.result.length > 0) {
+            console.log("WRONG");
 
+        }else{
+            console.log("GOOD");
+            this.correctIterator++;
+        }
+        console.log(this.result)
+        let progress = (this.correctIterator/this.questionIterator)*100
+        this.ProgBar.nativeElement.MaterialProgress.setProgress(progress);
 
     }
 
