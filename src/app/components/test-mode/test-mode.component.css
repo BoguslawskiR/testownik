@@ -37,6 +37,10 @@ body {
     background: rgb(163, 206, 113) !important;
 }
 
+.incorrect {
+    background: rgb(239, 115, 131) !important
+}
+
 .checked {
     background: rgba(63,81,181,0.1)
 }

@@ -4,7 +4,7 @@
   </div>
   <div class="mdl-card__supporting-text">
     <ul class="demo-list-item mdl-list">
-        <li [class.correct]="checkVal && a.is_correct" [class.checked]="a.checked" *ngFor="let a of question?.answers; let i = index" class="mdl-list__item" (click)="changeVal(i)">
+        <li [class.correct]="checkVal && a.is_correct" [class.checked]="a.checked" [class.incorrect]="a.checked && !a.is_correct && checkVal" *ngFor="let a of question?.answers; let i = index" class="mdl-list__item" (click)="changeVal(i)">
             <span class="mdl-list__item-primary-content">
                 <span *ngIf="!a.img_answer">{{a.answer}}</span><img *ngIf="a.img_answer" src="https://testownikpwr.herokuapp.com{{a.img_answer}}">
             </span>

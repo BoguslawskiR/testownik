@@ -44,6 +44,8 @@ export class TestComponent implements OnInit {
         this.checkVal=false;
 
         this.result = []
+
+        this.question.answers.forEach(x=> x.checked = false)
     }
 
     check(){
@@ -53,7 +55,7 @@ export class TestComponent implements OnInit {
         this.question.answers.forEach(x=>{
             if(x.checked == true && x.is_correct == false) this.result.push('e');
             if(x.checked != true && x.is_correct == true) this.result.push('e');
-            x.checked = false;
+           
         })
         if(this.result.length > 0) {
             console.log("WRONG");
